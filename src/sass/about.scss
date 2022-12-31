@@ -1,0 +1,121 @@
+@use './mixins' as *; 
+
+.about{
+    background-color: #fff;
+    display: grid; 
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-template-rows: repeat(auto-fill,minmax(200px,1fr));
+    color: var(--blue-color);
+    @include space-around;
+    margin-top: 5%;
+    .contain-shapes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    .text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        height: 200px;
+        margin-left: -5%;
+        h1{
+            font-size: 30px;
+            color: var(--blue-color);
+            margin-top: -10%;
+        }
+        p{
+            font-size: 12px;
+            width: 550px;
+            color: #000;
+        }
+    }
+
+    .shapes{
+    display: grid; 
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-template-rows: repeat(auto-fill,minmax(200px,1fr));
+    margin-top: 5%; 
+    margin-left: -10%; 
+    text-align: center;
+    .shape_1,.shape_2,.shape_3{
+        margin: 4%;
+        padding: 2%;
+        border: 1px solid var(--main-color);
+        border-radius: 10px;
+        h5{
+            margin-top: 3%;
+            font-size: 20px;
+        }
+        button{
+            @include button;
+        }
+        span{
+            transition: var(--transition);
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    .shape_1{
+        @include same-w-h(300px);
+        @include space-around;
+        flex-direction: column;
+        border-radius: 10px;
+        span{
+            font-size: 40px;
+        }
+        p{
+            width: 280px;
+            font-size: 10px;
+            color: #000;
+        }
+    }
+    .shape_2 {
+        @include same-w-h(300px);
+        @include space-around;
+        flex-direction: column;
+        border: 1px solid var(--dark-green-colors);
+        border-radius: 10px;
+        span{
+            font-size: 40px;
+        }
+    p {
+        width: 280px;
+        font-size: 10px;
+        color: #000;
+        };
+    }  
+    .shape_3{
+        @include same-w-h(300px);
+        @include space-around;
+        flex-direction: column;
+        border: 1px solid var(--dark-green-colors);
+        border-radius: 10px;
+        span{
+            font-size: 40px;
+        }
+        p {
+            width: 280px;
+            font-size: 10px;
+            color: #000;
+            }
+    }
+    }
+    }
+}
+/* small screen */
+@media (min-width:768px ) and (max-width:1000px){
+    .about{
+        padding-left: var(--padding-left);
+        padding-right: var(--padding-right);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+    }
+}

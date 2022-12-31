@@ -1,0 +1,62 @@
+.element {
+  width: 100%;
+  height: 60vh;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.element .content-offers {
+  width: 100%;
+  height: 90%;
+  margin-top: -6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.element .content-offers .offers {
+  width: 100%;
+  height: 50%;
+  margin-top: -8%;
+  margin-left: 0%;
+  padding-top: 3%;
+  background-color: var(--yellow-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.element .content-offers .offers div {
+  text-align: center;
+  margin: 2%;
+}
+.element .content-offers .offers div span {
+  font-size: 30px;
+  color: var(--blue-color);
+  margin-bottom: 3%;
+}
+.element .content-offers .offers div h5 {
+  margin-top: 7%;
+}
+.element .content-offers .offers div p {
+  font-size: 10px;
+  font-weight: 500;
+  margin-top: 2%;
+}

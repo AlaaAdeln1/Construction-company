@@ -1,0 +1,231 @@
+@use './mixins' as * ;
+
+.projects{
+    width: 100%;
+    height: 120vh;
+    button{
+        @include button;
+    }
+    .title{
+        position: relative;
+        margin-left: 10%;
+        margin-top: 10%;
+        top: 5%;
+        left: -3%;
+        &::before{
+            content: "";
+            width: 50px;
+            height: 2px;
+            background-color: var(--blue-color);
+            position: absolute;
+            left: -40%;
+            top: 20%;
+        }
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5%;
+        h3{
+            margin-left: 3%;
+            color: var(--blue-color);
+        }
+        button{
+            margin-right: 5%;
+        }
+    }
+.content-models{
+    .models{
+        @include space-around;
+        width: 100%;
+        height: 100%;
+        margin-top: 10%;
+        margin-left: 0%;
+        .model_1{
+            width: 300px;
+            height: 300px;
+            background-image: url(../images/images-website/construction-worker.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            transition: var(--transition);
+            &:hover{
+                transform: scale(1.1);
+            }
+            cursor: pointer;
+            &:hover div{
+                transition: var(--transition);
+                visibility: visible;
+            }
+            div{
+                width: 70%;
+                height: 100px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background-color: var(--blue-color);
+                span{
+                    position: absolute;
+                    color: var(--blue-color);
+                    background-color: #fff;
+                    width: 30px;
+                    height: 30px;
+                    right: 0;
+                    @include center;
+                    font-size: 20px;
+                }
+                h4{
+                    font-size: 18px;
+                    color: #fff;
+                    margin-top: 15%;
+                    margin-left: 16%;
+                }
+                p{
+                    color: #fff;
+                    margin-left: 16%;
+                    position: absolute;
+                    top: 10%;
+                    font-weight: 500;
+                }
+            }
+        }
+        .model_2{
+            width: 300px;
+            height: 300px;
+            background-image: url(../images/images-website/female.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            transition: var(--transition);
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+            }
+            &:hover div{
+                transition: var(--transition);
+                visibility: visible;
+            }
+            div{
+                transition: var(--transition);
+                visibility: hidden;
+                width: 70%;
+                height: 100px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background-color: var(--blue-color);
+                span{
+                    position: absolute;
+                    color: var(--blue-color);
+                    background-color: #fff;
+                    width: 30px;
+                    height: 30px;
+                    right: 0;
+                    @include center;
+                    font-size: 20px;
+                }
+                h4{
+                    font-size: 18px;
+                    color: #fff;
+                    margin-top: 15%;
+                    margin-left: 16%;
+                }
+                p{
+                    color: #fff;
+                    margin-left: 16%;
+                }
+            }
+        }
+        .model_3{
+            width: 300px;
+            height: 300px;
+            background-image: url(../images/images-website/Crane.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            transition: var(--transition);
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.1);
+            }
+            &:hover div{
+                transition: var(--transition);
+                visibility: visible;
+            }
+            div{
+                visibility: hidden;
+                width: 70%;
+                height: 100px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background-color: var(--blue-color);
+                span{
+                    position: absolute;
+                    color: var(--blue-color);
+                    background-color: #fff;
+                    width: 30px;
+                    height: 30px;
+                    right: 0;
+                    @include center;
+                    font-size: 20px;
+                }
+                h4{
+                    font-size: 18px;
+                    color: #fff;
+                    margin-top: 15%;
+                    margin-left: 16%;
+                }
+                p{
+                    color: #fff;
+                    margin-left: 16%;
+                }
+            }
+        }
+    }
+}
+}
+@media(min-width:200px)and (max-width:900px){
+    .projects{
+        height: 130vh;
+        .title{
+            position: relative;
+            margin-left: 10%;
+            margin-top: 10%;
+            top: 1%;
+            left: 0%;
+        }
+        .models{
+            @include space-around;
+            flex-direction: column;
+        .model_1,.model_2,.model_3{
+            margin-bottom: 5%;
+            div{
+                width: 100%;
+            }
+        }
+        }
+    }
+}
+@media (min-width:1000px) and (max-width:1200px) {
+    .projects{
+    .title{
+        position: relative;
+        margin-left: 10%;
+        margin-top: 10%;
+        top: 2%;
+        left: -3%;
+        }
+    }
+}
+@media (min-width:900px) and (max-width:1000px) {
+    .projects{
+    .title{
+        position: relative;
+        margin-left: 10%;
+        margin-top: 10%;
+        top: 1%;
+        left: -2%;
+        }
+    }
+}

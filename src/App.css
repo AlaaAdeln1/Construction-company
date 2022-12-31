@@ -1,0 +1,83 @@
+/* Start global rules */
+/* this is global rules for any design  */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Chivo+Mono:ital,wght@0,200;0,300;0,600;0,700;0,800;0,900;1,500&family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* colors */
+:root {
+  --blue-color: #2192FF;
+  --blue-dark-color: #083AA9;
+  --orange-color: #FF6E31;
+  --yellow-color: #FFB100;
+  --light-green-color: #38E54D;
+  --dark-green-color: #367E18;
+  --black-color: #181818;
+  --padding-right: 15px;
+  --padding-left: 15px;
+  --transition: all 0.2s ease;
+}
+
+/* don't forget make a components  repeat statments in design*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* add your font here */
+  font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  padding-left: var(--padding-left);
+  padding-right: var(--padding-right);
+  margin-left: auto;
+  margin-right: auto;
+  display: grid; 
+  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  grid-template-rows: repeat(auto-fill,minmax(200px,1fr));
+}
+
+/* small screen */
+@media (min-width:768px) {
+  .container {
+    width: 750px;
+    padding-left: var(--padding-left);
+    padding-right: var(--padding-right);
+  }
+}
+
+/* meduim screen */
+@media (min-width:992px) {
+  .container {
+    width: 970px;
+    padding-left: var(--padding-left);
+    padding-right: var(--padding-right);
+  }
+}
+
+/* larg screen */
+@media (min-width:1200px) {
+  .container {
+    width: 1170px;
+    padding-left: var(--padding-left);
+    padding-right: var(--padding-right);
+  }
+}
+/* End global rules */
+
+.active{
+  color: var(--blue-color);
+}
+.app .container{
+  display: flex;
+  flex-direction: column;
+}

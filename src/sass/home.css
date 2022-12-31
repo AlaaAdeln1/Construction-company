@@ -1,0 +1,53 @@
+.content {
+  background-image: url(../images/background/background_2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text {
+  height: 80vh;
+  width: 100%;
+  margin-left: 10%;
+  margin-top: 10%;
+  color: #fff;
+}
+.text h3 {
+  font-weight: bold;
+  opacity: 0.9;
+}
+.text h1 {
+  font-size: 50px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+.text p {
+  margin-bottom: 34px;
+  margin-top: 4em;
+  font-weight: 600;
+}
+.text button {
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  background-color: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+.text button:hover {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  background-color: #fff;
+}
+
+@media (min-width: 400px) and (max-width: 1000px) {
+  .text {
+    width: 100%;
+    color: #00ffb3;
+    margin-left: 0;
+    text-align: center;
+  }
+}
